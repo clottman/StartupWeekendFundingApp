@@ -1,0 +1,2 @@
+class PlaidController < ApplicationController
+end

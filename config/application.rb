@@ -24,3 +24,9 @@ module FundingApp
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
+
+Plaid.config do |p|
+    p.customer_id = ENV["plaid_client_id"]
+    p.secret = ENV["plaid_secret"]
+    p.environment_location = ENV["plaid_env_location"]
+end
