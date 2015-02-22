@@ -1,44 +1,66 @@
-<div class="container-fluid">
+<div class="container">
 	<div class="row">
-		<div class="jumbotron">
-        <h1>Spare change for change.</h1>
-        <p class="lead">A feel good way to automate giving. Round up your everyday transactions and donate the change to a charity that matters to you.</p>
-      </div>
-
-		<div class="col-md-4">
+		<div class="col-sm-1 col-md-2">
+		</div>
+		<div class="col-sm-10 col-md-8 bg-gradient">
+		<br/>
+			<img src="images/whitecharity.png" class="img-responsive header-logo">
+		
 			<div class="step-1">
-			  <h2>Step 1</h2>
+			  <img src="images/non-profit-icon.png" alt="Select a Non Profit" class="step-icon pull-left">
+			  <h2>Step 1:</h2>
+			  <div class="divider"></div>
 			  <p class="lead">Select your non-profit.</p> 
 			</div>
-			</div>
-		<div class="col-md-4">
-		
+			
 			<div class="step-2">
-			  <h2>Step 2</h2>
-			  <p class="lead">Sync your bank account.</p> 
+			  <img src="images/sync-icon.png" alt="Sync your bank account" class="step-icon pull-left">
+			  <h2>Step 2:</h2>
+			  <div class="divider"></div>
+			  <p class="lead">Sync your bank account. <span class="glyphicon glyphicon-question-sign link"></span></p> 
 			</div>
-			</div>
-		<div class="col-md-4">
+		
 			<div class="step-3">
-			  <h2>Step 3</h2>
-			  <p class="lead">Donate change from your rounded up transactions.</p> 
+			  <img src="images/thanks-icon.png" alt="Donate change from your rounded up transactions" class="step-icon pull-left">
+			  <h2>Step 3:</h2>
+			  <div class="divider"></div>
+			  <p class="lead">Donate your change from rounded up transactions.</p> 
+			</div>
+		<div class="row">
+			<div class="col-sm-3">
+			</div>
+			<div class="col-sm-6">		
+			
+				<form class="form-signin" action="submit_signin">
+				    <h2 class="form-signin-heading"></h2>
+				    <formgroup>
+				    	<label for="inputEmail" class="sr-only">Email address</label>
+				    	<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required=""  autocomplete="off" value="PreviouslySupplied@email.com">
+			    	</formgroup>
+				    <formgroup>
+				    	<label for="inputPassword" class="sr-only">Password</label>
+				    	<input type="password" id="password" class="form-control" placeholder="Password" required="" autocomplete="off">
+				    	<!-- <p class="pw-strength-label">Password strength</p>	     -->
+				    </formgroup>
+				    <button class="btn btn-lg btn-primary" type="submit" >Register</button>
+			    	<button class="btn btn-lg btn-link" type="login" >Log In</button>
+			    	<!-- <button class="btn btn-lg btn-primary btn-block" type="submit" >Register</button>
+			    	<button class="btn btn-lg btn-default btn-block" type="login" >Log In</button> -->
+			  </form>
+			</div>
+		</div>
+		<div class="row footer">
+				<div class="col-xs-4">
+					<center><img src='images/main-icon-lock.gif' class="lock"></br>Secured and encrypted data.</center>
+				</div>
+				<div class="col-xs-4">
+					<center><img src='images/main-icon-badge.gif' class="securitybadge"></br>SSL and updated certificates.</center>
+				</div>
+				<div class="col-xs-4">
+					<center><img src='images/main-icon-briefcase.gif' class="briefcase"></br>Sensitive data only acceesible by you.</center>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="col-xs-3"></div>
-	<div class="col-xs-6">
-		<form class="form-signin" action="submit_signin">
-		    <h2 class="form-signin-heading"></h2>
-		    <formgroup>
-		    	<label for="inputEmail" class="sr-only">Email address</label>
-		    	<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required=""  autocomplete="off" value="PreviouslySupplied@email.com">
-	    	</formgroup>
-		    <formgroup>
-		    	<label for="inputPassword" class="sr-only">Password</label>
-		    	<input type="password" id="password" class="form-control" placeholder="Password" required="" autocomplete="off">
-		    	<!-- <p class="pw-strength-label">Password strength</p>	     -->
-		    </formgroup>
-	    	<button class="btn btn-lg btn-primary btn-block" type="submit" >Register</button>
-	  </form>
-	</div>
-</div>	
+</div>
+</div>
