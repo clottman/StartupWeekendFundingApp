@@ -38,18 +38,18 @@ h1 {
   margin: 10px;
   margin-left: 20px; }
 
+.sub-header {
+  margin-bottom: 20px; }
+  .sub-header .header-logo {
+    max-height: 40px; }
+
 .step-1,
 .step-2,
 .step-3 {
   border-bottom: 1px solid #5f81c4;
   min-height: 120px; }
 
-form {
-	text-align:left;
-}
-
 .form-signin {
   margin-top: 30px; }
   .form-signin button {
     margin-top: 20px; }
-
