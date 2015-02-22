@@ -16,6 +16,9 @@ class PlaidController < ApplicationController
 		redirect_to :choose_charity
 	end
 
+	def verify_charity
+	end
+	
 	def choose_charity
 	end
 

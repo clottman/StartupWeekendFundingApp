@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'search_nonprofits' => 'plaid#search_nonprofits'
   get 'connect_bank' => 'plaid#connect_bank'
   get 'choose_charity' => 'plaid#choose_charity'
+  get 'confirm_charity' => 'plaid#confirm_charity'
   get 'dashboard' => 'plaid#transaction_list'
   get 'thanks' => 'plaid#thanks'
   get 'submit_signin' => 'plaid#submit_signin'

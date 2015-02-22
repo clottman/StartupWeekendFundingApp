@@ -164,6 +164,7 @@ h2 {
   .search h4 {
     font-size: 18px;
     color: #0b9c91;
+    color: #444444;
     font-weight: bold; }
 
 .bank {
@@ -187,3 +188,11 @@ h2 {
 .search,
 .browse {
   margin-bottom: 60px; }
+
+.search.confirm-charity {
+  height: auto;
+  text-align: left;
+  padding: 10px; }
+
+.input-text {
+  margin-bottom: 15px; }

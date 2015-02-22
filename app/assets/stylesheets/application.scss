@@ -24,6 +24,7 @@ $secondary-color-light: #50bbb3;
 $tertiary-color: #3e20af;
 
 $gray:#eee;
+$gray-dark:#444;
 
 body {
 	background-color: $primary-color-light;
@@ -220,6 +221,7 @@ h2 {
 	h4	{
 			font-size:18px;
 				color: $secondary-color;
+				color: $gray-dark;
 				font-weight:bold;			
 	}
 	text-align: right;
@@ -252,4 +254,14 @@ h2 {
 .search,
 .browse {
 	margin-bottom: 60px;
+}
+
+.search.confirm-charity {
+	height:auto;
+	text-align: left;
+	padding:10px;	
+}
+
+.input-text {
+	margin-bottom:15px;
 }
