@@ -45,6 +45,7 @@ class PlaidController < ApplicationController
 		end
 		# donation inflation ftw
 		@roundups_to_date = @current_roundups + 15
+		@roundups_until_next = 10 - @current_roundups
 	end
 
 	def thanks

@@ -26,6 +26,8 @@ $tertiary-color: #3e20af;
 $gray:#eee;
 $gray-dark:#444;
 
+$purple: #553876;
+
 body {
 	background-color: $primary-color-light;
 	background-color: #eee;
@@ -77,7 +79,7 @@ h2 {
 	}
 }
 
-.link {
+a, .link {
 	color:$secondary-color-light;
 	&:hover {
 		cursor:pointer;
@@ -91,6 +93,16 @@ h2 {
 		background-color: white;
 		color:$secondary-color;
 		text-decoration: none;
+	}
+}
+
+.header .btn-link {
+	margin-top:10px;
+	color:white;
+	&:hover {
+		color:white;
+		background-color: transparent;
+
 	}
 }
 
@@ -192,11 +204,12 @@ h2 {
 	margin-bottom:10px;
 	font-size:18px;
 	color: $secondary-color;
+	color: $gray-dark;
 	font-weight:bold;
 	text-align: right;
 	border: 2px solid $secondary-color-light;
 	background-color: white;
-	img {
+	.logo {		
 		margin-top:-20px;
 		height: 128px;
 		float:left;
@@ -208,14 +221,22 @@ h2 {
 		cursor:pointer;
 		background-color: $secondary-color-light;
 	}
+	.verified {
+		margin:10px 0;
+		max-width:100px;
+		position: absolute;
+		bottom: 0;
+		right: 30px;
+	}
 }
 
 .text-right {
 	text-align: right;
 }
 .search {
-	height:130px;
+	min-height:130px;
 	padding-right:10px;
+	padding-bottom:10px;
 	margin-bottom:10px;
 	.search-input-text {
 		// width:auto;
@@ -245,6 +266,7 @@ h2 {
 	padding:15px;
 	font-size:18px;
 	color: $secondary-color;
+	color: $gray-dark;
 	font-weight:bold;
 	border: 2px solid $secondary-color-light;
 	background-color: white;
@@ -271,6 +293,110 @@ h2 {
 	margin-bottom:15px;
 }
 
+.input-logo {
+	margin-bottom:20px;
+}
+
+.tile {
+	margin-bottom:30px;
+	border: 5px solid #553876;
+	img {
+		width:100%;
+	}
+}
+
+.tile-body {
+	padding:5px;
+	background-color: $purple;
+}
+
+.tile-section {
+	color:white;
+	margin: 10px 0;
+}
+
+.transaction-list {
+	margin-bottom:0;
+	background-color:$purple;
+}
+
+.transaction {
+	border: 3px solid #553876;
+	border-radius:5px;
+	padding:5px;
+}
+
+
+.currency-amount,
+.change-amount {
+	float:right;
+}
+
+.total-section {
+
+	height:250px;
+	overflow: hidden;
+	text-align: center;
+		.change-amount {
+			float:none;
+			display:block;
+			margin:auto;
+			color:white;
+			font-weight: normal;
+			font-size:35px;
+		}
+
+	.transaction-name {
+			// font-size:18px;			
+	}
+}
+
+.transaction-change {
+	color:$gray;
+	color:white;
+}
+
+.charity-name {
+	font-size: 16px;
+}
+
+.tile-section .charity-logo {
+	max-height:128px;
+	max-width:100%;
+	width:auto;
+	margin:auto;
+	margin-bottom:5px;
+}
+
+.change-amount {
+	font-weight:bold;
+	color:$secondary-color;
+	color:$primary-color-light + #222;
+}
+
+.list-group {
+	max-height:250px;
+	overflow: auto;
+}
+
+.tile-section .act_icon {
+	max-height: 20px;
+	width:auto;
+	margin:0 5px;
+	float:right;
+}
+
+span.account {
+	padding-left:30px;
+	font-size:16px;
+	height:35px;
+	display: inline-block;
+}
+
+.accountLink {
+	// padding-left:30px;
+}
+
 select {
 	/* the exact size is ignored in chrome, but it makes it a little bigger */
 	/* add webkit-appearance: none; if you want this to exactly work */
@@ -291,4 +417,5 @@ select {
 
 .thanks {
 	min-height:600px;
+	font-size:16px;
 }

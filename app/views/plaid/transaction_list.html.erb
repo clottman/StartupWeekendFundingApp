@@ -1,11 +1,74 @@
-<h6>This month's roundups: <%= number_to_currency @current_roundups %></h6>
-<h6>Roundups to date: <%= number_to_currency @roundups_to_date %> </h6>
-<ul class="list-group">
-<% @transactions.each do |t| %>
-	<li class="transaction list-group-item">
-		<p><span>Amount: </span><%= number_to_currency t[:amount] %></p>
-		<p><span>Location: </span><%= t[:name] %></p>
-		<p class="change-amount"><span>Charity Change: </span><%= number_to_currency t[:change] %></p>
-	</li>
-<% end %>
-</ul>
+
+<div class="container">	
+	<div class="row">
+		<div class="col-sm-1 col-md-2"></div>
+		<div class="col-sm-11 col-md-10">
+		<br/><br/>
+			<!-- <h2>Your Charity Change Dashboard</h2> -->
+		</div>
+	<div class="col-xs-12">
+		<div class="featured">			
+			<div class="col-sm-1 col-md-2"></div>
+			<div class="col-sm-5 col-xs-10 col-md-4">
+				<div class="tile">
+					<img src="images/Tile-TotalRoundups.png" alt="" class="img-responsive">
+					<div class="tile-body total-section">
+						<div class="tile-section">
+							<span class="change-amount"><%= number_to_currency @roundups_to_date %></span>	
+							<span class="transaction-name">Round-ups to date</span>								
+						</div>							
+						<div class="tile-section">
+							<span class="change-amount"><%= number_to_currency @roundups_until_next %></span>	
+							<span class="transaction-name">This month's round-ups</span>								
+						</div>
+						<div class="tile-section">
+							<span class="change-amount"><%= number_to_currency @current_roundups %></span>	
+							<span class="transaction-name">Round-ups until next donation <span class="glyphicon glyphicon-question-sign link"></span></span>								
+						</div>
+					</div>	
+				</div>	
+				<div class="tile">
+					<img src="images/Tile-Nonprofit.png" alt="" class="img-responsive">
+					<div class="tile-body">
+						<div class="tile-section">						
+						
+						<center><img src="images/nhs.png" class="charity-logo"><br/>
+						<span class="charity-name">Nebraska Humane Society</span><br/><br/></center>
+						<!-- <a>Change?</a>    <a class="pull-right">Select Additional</a> -->
+						<center><a>Modify Non-Profits</a></center>
+					</div></div>
+				</div>	
+			</div>	
+			
+			<div class="col-sm-5 col-xs-10  col-md-4">		
+				<div class="tile">
+					<img src="images/Tile-RecentRoundups.png" alt="" class="img-responsive">
+					<ul class="list-group transaction-list">
+						<% @transactions.each do |t| %>
+							<li class="transaction list-group-item">
+								<span class="transaction-name"><%= t[:name] %> </span><span class="currency-amount">(<%= number_to_currency t[:amount] %>)</span>
+								<!-- <p><span>Location: </span><%= t[:name] %></p> -->
+								<br/>
+								<span class="transaction-change">Charity Change: </span><span class="change-amount"><%= number_to_currency t[:change] %></span>
+							</li>
+						<% end %>
+					</ul>
+				</div>	
+
+				<div class="tile">
+					<img src="images/Tile-SyncdAccounts.png" alt="" class="img-responsive">
+					<div class="tile-body">
+						<div class="tile-section">
+						<span class="account">Bank of America</span><img src="images/act_sync.gif" alt="" class="act_icon"> <img src="images/act_withdraw.gif" alt="" class="act_icon"><br/>
+						<span class="account">Citi Credit Card</span><img src="images/act_sync.gif" alt="" class="act_icon">
+						<br/>
+						<br/>
+						<center><a class="accountLink">Modify Accounts</a></center>
+					</div></div>
+				</div>	
+			</div>	
+			
+		</div>
+	</div>
+	</div>	
+</div>	
