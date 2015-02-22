@@ -1,9 +1,9 @@
-<ul>
+<ul class="list-group">
 <% @transactions.each do |t| %>
-	<li>
+	<li class="transaction list-group-item">
 		<p><span>Amount: </span><%= t[:amount] %></p>
 		<p><span>Location: </span><%= t[:name] %></p>
-		<p><span>Charity Change: </span><%= number_to_currency t[:change] %></p>
+		<p class="change-amount"><span>Charity Change: </span><%= number_to_currency t[:change] %></p>
 	</li>
 <% end %>
 </ul>
