@@ -1,10 +1,5 @@
 <div class="container-fluid">
 	<div class="row">
-		<div class="header">
-			<img src="whitecharity.png" alt="" class="header-logo">
-		</div>
-	</div>
-	<div class="row">
 		<div class="jumbotron">
         <h1>Spare change for change.</h1>
         <p class="lead">A feel good way to automate giving. Round up your everyday transactions and donate the change to a charity that matters to you.</p>
@@ -34,10 +29,15 @@
 	<div class="col-xs-6">
 		<form class="form-signin" action="submit_signin">
 		    <h2 class="form-signin-heading"></h2>
-		    <label for="inputEmail" class="sr-only">Email address</label>
-		    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" autocomplete="off">
-		    <label for="inputPassword" class="sr-only">Password</label>
-		    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" autocomplete="off">	    
+		    <formgroup>
+		    	<label for="inputEmail" class="sr-only">Email address</label>
+		    	<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required=""  autocomplete="off">
+	    	</formgroup>
+		    <formgroup>
+		    	<label for="inputPassword" class="sr-only">Password</label>
+		    	<input type="password" id="password" class="form-control" placeholder="Password" required="" autocomplete="off">
+		    	<p class="pw-strength-label">Password strength</p>	    
+		    </formgroup>
 	    	<button class="btn btn-lg btn-primary btn-block" type="submit" >Sign in</button>
 	  </form>
 	</div>

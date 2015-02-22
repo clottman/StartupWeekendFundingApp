@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 	$('#password').pwstrength({
         ui: { showVerdictsInsideProgressBar: true, showVerdicts: false },
-        common: { minChar:4}
+        common: { minChar:3}
     });
 
 });
