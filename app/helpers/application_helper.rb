@@ -1,5 +1,21 @@
 module ApplicationHelper
 
+	def banks
+		[
+			"American Express",
+			"Bank of America",
+			"Capital One 360",
+			"Charles Schwab",
+			"Chase",
+			"Citi",
+			"Fidelity",
+			"US Bank",
+			"USAA",
+			"Wells Fargo",
+			"Other?"
+		]
+	end
+	
 	def nonprofit_types
 		[
 			['Arts, Culture & Humanities', 1],

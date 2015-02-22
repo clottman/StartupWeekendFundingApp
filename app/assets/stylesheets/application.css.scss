@@ -398,6 +398,25 @@ span.account {
 }
 
 select {
+	/* the exact size is ignored in chrome, but it makes it a little bigger */
+	/* add webkit-appearance: none; if you want this to exactly work */
+	font-size:2em;
+}
+
+.right {
+	float:right;
+}
+.modal-buttons {
+	height:40px;
+}
+
+.modal-buttons button, .modal-buttons a {
+	margin-top: 10px;
+	margin-left:10px;
+}
+
+.thanks {
+	min-height:600px;
 	font-size:16px;
 }
 
