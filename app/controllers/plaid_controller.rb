@@ -3,6 +3,7 @@ class PlaidController < ApplicationController
 	require 'json'
 	
 	def index
+		@hide_header = true
 	end
 
 	def submit_signin
@@ -56,13 +57,42 @@ class PlaidController < ApplicationController
 	end
 
 	def search_nonprofits
-		begin
-		search_string = URI.encode ("https://projects.propublica.org/nonprofits/api/v1/search.json?q=" + params[:q] + "&state[id]=NE")
-		response = open(search_string).read
-		rescue
-			response = "{filings: []}"
+		query = "https://projects.propublica.org/nonprofits/api/v1/search.json?"
+		if !params[:category].blank?
+			query = query + "ntee[id]=" + params[:category] + "&"
 		end
-		render json: response
+		if params[:q] != ""
+			query = query + "q=" + params[:q] + "&"
+ 		end
+ 		if params[:state].blank?
+ 			state = "NE"
+ 		else
+ 			state = params[:state]
+ 		end
+
+		begin
+			search_string = URI.encode(query + "state[id]=" + state)
+			puts search_string
+			response = open(search_string).read
+		rescue
+			no_response = true
+		end
+
+		@names = []
+		unless no_response
+			result = JSON.parse(response)
+			filings = result["filings"]
+			filings.each do | f |
+				@names.push(f['organization']['name'].titleize)
+			end
+		end
+
+		if params.count == 3   # only q as parameter, send back json for typeahead
+			render json: @names	
+		else
+			render :display_search_results
+		end
+
 	end
 
 

@@ -218,9 +218,11 @@ a, .link {
 	}
 }
 
+.text-right {
+	text-align: right;
+}
 .search {
 	height:130px;
-	padding-top:20px;
 	padding-right:10px;
 	margin-bottom:10px;
 	.search-input-text {
@@ -230,14 +232,22 @@ a, .link {
 			font-size:18px;
 				color: $secondary-color;
 				color: $gray-dark;
-				font-weight:bold;			
+				font-weight:bold;	
+			line-height:40px;
 	}
-	text-align: right;
+	text-align: center;
 	border: 2px solid $secondary-color-light;
 	background-color: white;
-	
+	label {
+		font-size:16px;
+	}
+	select {
+		margin-right:15px;
+	}
 }
 
+#np_search_results p {line-height:30px;}
+#np_search_results button { position:relative; float:right;}
 .bank {
 	min-height:90px;
 	padding:15px;
@@ -257,18 +267,13 @@ a, .link {
 
 .typeahead {
 	padding:3px;
+	min-width:180px;
 }
 
 .featured,
-.search,
+#np_search_results,
 .browse {
 	margin-bottom: 60px;
-}
-
-.search.confirm-charity {
-	height:auto;
-	text-align: left;
-	padding:10px;	
 }
 
 .input-text {
@@ -376,4 +381,9 @@ span.account {
 
 .accountLink {
 	// padding-left:30px;
+
+select {
+	/* the exact size is ignored in chrome, but it makes it a little bigger */
+	/* add webkit-appearance: none; if you want this to exactly work */
+	font-size:2em;
 }

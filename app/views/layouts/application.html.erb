@@ -9,6 +9,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<% unless @hide_header %>
+	<!-- header -->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="header sub-header">
+				<img src="images/whitecharity.png" alt="" class="header-logo">
+			</div>
+		</div>
+	</div>
+<% end %>
+
 <div id='body_div'>
 	<%= yield %>
 </div>

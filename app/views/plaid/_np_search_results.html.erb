@@ -1,0 +1,9 @@
+<div class="list-group">
+<% unless names.blank? %>
+	<% names.each do |f| %>
+		<p class="list-group-item"><%= f %><button class="btn btn-primary text-right">Select</button></p>
+	<% end %>
+<% else %>
+	<p class="list-group-item">No results for the selected category.</p>	
+<% end %>
+</div>

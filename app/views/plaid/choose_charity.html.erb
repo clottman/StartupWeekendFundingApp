@@ -1,55 +1,56 @@
-<div class="container-fluid">
-	<div class="row">
-		<div class="header sub-header">
-			<img src="images/whitecharity.png" alt="" class="header-logo">
-		</div>
-	</div>
-</div>
 <div class="container">	
 	<div class="row">
-	<div class="col-xs-12">
-		<h2>Which charity would you like to donate to?</h2>
-	</div>
-	<div class="col-xs-12">
-		<div class="featured">
-			<!-- <h4>Featured Local Charities:</h4> -->
-			<div class="col-md-4">
-				<div class="charity">
-					<img src="images/odm.jpg" class="pull-left">
-					Open Door Mission Omaha Chapter
+		<div class="col-xs-12">
+			<h2>Which charity would you like to donate to?</h2>
+		</div>
+		<div class="col-xs-12">
+			<div class="featured">
+				<!-- <h4>Featured Local Charities:</h4> -->
+				<div class="col-md-4">
+					<div class="charity">
+						<img src="images/odm.jpg" class="pull-left">
+						Open Door Mission Omaha Chapter
+					</div>	
 				</div>	
-			</div>	
-			<div class="col-md-4">		
-				<div class="charity">
-					<img src="images/nhs.png">
-					Nebraska Humane Society
+				<div class="col-md-4">		
+					<div class="charity">
+						<img src="images/nhs.png">
+						Nebraska Humane Society
+					</div>	
 				</div>	
-			</div>	
-			<div class="col-md-4">
-				<div class="charity">
-					<img src="images/buildinghouse.jpg">
-					Omaha Habitat for Humanity
-				</div>	
-			</div>
-			<div class="col-md-4">
-				<div class="search">
-					<h4>Search For Charities:</h4>
-					<input type="text" class="typeahead search-input-text" id='nonprofits-typeahead' data-provide='typeahead' autocomplete="off" />
-					<select><option>NE</option></select>
-					and / or
-					<select><option>All Categories</option></select>
-					<button class="btn-primary">Search</button>
-				</div>	
+				<div class="col-md-4">
+					<div class="charity">
+						<img src="images/buildinghouse.jpg">
+						Omaha Habitat for Humanity
+					</div>	
 				</div>	
 			</div>
 		</div>
-	</div>
-	<!-- <div class="col-xs-12">
+	</div>			
+	<div class="col-xs-12">
 		<div class="search">
-			
+			<div>
+				<h4>Enter your favorite charity's name, or explore charities in your area.</h4>
+			</div>	
+			<div>
+			<%= form_tag "search_nonprofits", remote: true, method: :get do %>
+				<div class="col-md-6">
+					<%= text_field_tag 'q', nil, class: 'typeahead', data: { provide: 'typeahead' }  %>
+					<%= link_to "Donate to this charity!", 'submit_choose_charity', class: ['btn btn-primary'] %>
+				</div>
+				<div class="col-md-6">
+						<%= label_tag "state", "State:" %>
+						<%= select_tag "state", options_for_select(us_states, "NE") %>
+						<%= label_tag "category", "By Category:" %>
+						<%= select_tag "category", options_for_select(nonprofit_types) %>
+						<%= submit_tag "Search", class: ["btn btn-primary"] %>
+				</div>
+			<% end %>
+			</div>
+		</div>
+		<div id="np_search_results">
+		</div>
+
 	</div>	
 
-	</div> -->
-	
-	</div>	
-</div>	
+	</div>
