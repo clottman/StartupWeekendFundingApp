@@ -5,6 +5,10 @@ class PlaidController < ApplicationController
 
 	end
 
+	def submit_signin
+		redirect_to :connect_bank
+	end
+
 	def connect_bank
 
 	end
