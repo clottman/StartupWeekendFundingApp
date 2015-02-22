@@ -5,14 +5,18 @@ $(document).ready(function() {
 			if (query.length > 3) {
 			$.get('search_nonprofits/?q=' + query, function(data) {
 					var npNames = [];
-					for (var i =0; i<data.filings.length; i++) {
-						npNames.push(data.filings[i].organization.name);
-					}
+						for (var i =0; i<data.filings.length; i++) {
+							npNames.push(data.filings[i].organization.name);
+						}
 					return process(npNames);
-					})
+				})
 			}
 		}
 	})
 
+	$('#password').pwstrength({
+        ui: { showVerdictsInsideProgressBar: true, showVerdicts: false },
+        common: { minChar:4}
+    });
 
 });

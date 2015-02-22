@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'connect_bank' => 'plaid#connect_bank'
   get 'choose_charity' => 'plaid#choose_charity'
   get 'transaction_list' => 'plaid#transaction_list'
+  get 'thanks' => 'plaid#thanks'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

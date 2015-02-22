@@ -27,3 +27,16 @@ h1 {
 
 .step-1 {
   border-bottom: 1px solid #5f81c4; }
+
+#body_div
+{
+  text-align: center;
+  width: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form {
+	text-align:left;
+}
