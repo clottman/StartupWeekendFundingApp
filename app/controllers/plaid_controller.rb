@@ -57,7 +57,7 @@ class PlaidController < ApplicationController
 
 	def search_nonprofits
 		query = "https://projects.propublica.org/nonprofits/api/v1/search.json?"
-		if params[:category].to_i != 0 
+		if !params[:category].blank?
 			query = query + "ntee[id]=" + params[:category] + "&"
 		end
 		if params[:q] != ""
@@ -74,9 +74,24 @@ class PlaidController < ApplicationController
 			puts search_string
 			response = open(search_string).read
 		rescue
-			response = "{filings: []}"
+			no_response = true
 		end
-		render json: response
+		
+		result = JSON.parse(response)
+		@names = []
+		unless no_response
+			filings = result["filings"]
+			filings.each do | f |
+				@names.push(f['organization']['name'].titleize)
+			end
+		end
+
+		if params.count == 3   # only q as parameter, send back json for typeahead
+			render json: @names	
+		else
+			render :display_search_results
+		end
+
 	end
 
 

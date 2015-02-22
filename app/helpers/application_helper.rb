@@ -2,7 +2,6 @@ module ApplicationHelper
 
 	def nonprofit_types
 		[
-			['All', 0],
 			['Arts, Culture & Humanities', 1],
 			['Education', 2],
 			['Environment and Animals', 3],
