@@ -11,13 +11,8 @@ $(document).ready(function() {
 					return process(npNames);
 					})
 			}
-		},
-		template: {suggestion: suggestionTemplate}
+		}
 	})
-
-	var suggestionTemplate = function (sug) {
-		return "<p>" + sug + "</p>"
-	}
 
 
 });
