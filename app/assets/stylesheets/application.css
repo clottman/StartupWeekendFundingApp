@@ -69,6 +69,9 @@ a, .link {
 .header .btn-link {
   margin-top: 10px;
   color: white; }
+  .header .btn-link:hover {
+    color: white;
+    background-color: transparent; }
 
 .header {
   background-color: #1c4ba9; }
@@ -158,19 +161,33 @@ a, .link {
     cursor: pointer;
     background-color: #50bbb3; }
 
+.text-right {
+  text-align: right; }
+
 .search {
   height: 130px;
-  padding-top: 20px;
   padding-right: 10px;
   margin-bottom: 10px;
-  text-align: right;
+  text-align: center;
   border: 2px solid #50bbb3;
   background-color: white; }
   .search h4 {
     font-size: 18px;
     color: #0b9c91;
     color: #444444;
-    font-weight: bold; }
+    font-weight: bold;
+    line-height: 40px; }
+  .search label {
+    font-size: 16px; }
+  .search select {
+    margin-right: 15px; }
+
+#np_search_results p {
+  line-height: 30px; }
+
+#np_search_results button {
+  position: relative;
+  float: right; }
 
 .bank {
   min-height: 90px;
@@ -188,17 +205,13 @@ a, .link {
     background-color: #50bbb3; }
 
 .typeahead {
-  padding: 3px; }
+  padding: 3px;
+  min-width: 180px; }
 
 .featured,
-.search,
+#np_search_results,
 .browse {
   margin-bottom: 60px; }
-
-.search.confirm-charity {
-  height: auto;
-  text-align: left;
-  padding: 10px; }
 
 .input-text {
   margin-bottom: 15px; }
@@ -277,4 +290,8 @@ a, .link {
 span.account {
   padding-left: 30px;
   font-size: 16px;
-  height: 25px; }
+  height: 35px;
+  display: inline-block; }
+
+select {
+  font-size: 2em; }

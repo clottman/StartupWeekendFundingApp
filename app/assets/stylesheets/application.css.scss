@@ -99,6 +99,11 @@ a, .link {
 .header .btn-link {
 	margin-top:10px;
 	color:white;
+	&:hover {
+		color:white;
+		background-color: transparent;
+		
+	}
 }
 
 .header {
@@ -376,14 +381,14 @@ a, .link {
 span.account {
 	padding-left:30px;
 	font-size:16px;
-	height:25px;
+	height:35px;
+	display: inline-block;
 }
 
 .accountLink {
 	// padding-left:30px;
+}
 
 select {
-	/* the exact size is ignored in chrome, but it makes it a little bigger */
-	/* add webkit-appearance: none; if you want this to exactly work */
 	font-size:2em;
 }
