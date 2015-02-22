@@ -26,6 +26,7 @@ class PlaidController < ApplicationController
 	def transaction_list
   		@user = Plaid.add_user("connect", "plaid_test", "plaid_good", "wells")
   		@transactions = []
+  		@current_roundups = 0
 		@user.transactions.each do |t|
 			amount = t[2]
 			change = amount.ceil - amount
@@ -35,8 +36,11 @@ class PlaidController < ApplicationController
 					name: t[3],
 					change: change
 				})
+				@current_roundups = @current_roundups + change
 			end
 		end
+		# donation inflation ftw
+		@roundups_to_date = @current_roundups + 15
 	end
 
 	def thanks

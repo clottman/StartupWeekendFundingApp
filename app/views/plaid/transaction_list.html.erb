@@ -1,3 +1,5 @@
+<h6>This month's roundups: <%= number_to_currency @current_roundups %></h6>
+<h6>Roundups to date: <%= number_to_currency @roundups_to_date %> </h6>
 <ul class="list-group">
 <% @transactions.each do |t| %>
 	<li class="transaction list-group-item">
