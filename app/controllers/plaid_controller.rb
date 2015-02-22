@@ -76,10 +76,10 @@ class PlaidController < ApplicationController
 		rescue
 			no_response = true
 		end
-		
-		result = JSON.parse(response)
+
 		@names = []
 		unless no_response
+			result = JSON.parse(response)
 			filings = result["filings"]
 			filings.each do | f |
 				@names.push(f['organization']['name'].titleize)

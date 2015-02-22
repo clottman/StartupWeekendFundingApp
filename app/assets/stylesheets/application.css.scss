@@ -210,6 +210,9 @@ h2 {
 	}
 }
 
+.text-right {
+	text-align: right;
+}
 .search {
 	height:130px;
 	padding-right:10px;
@@ -235,6 +238,8 @@ h2 {
 	}
 }
 
+#np_search_results p {line-height:30px;}
+#np_search_results button { position:relative; float:right;}
 .bank {
 	min-height:90px;
 	padding:15px;
@@ -257,15 +262,10 @@ h2 {
 }
 
 .featured,
-.search,
+#np_search_results,
 .browse {
 	margin-bottom: 60px;
 }
-
-.search.confirm-charity {
-
-}
-
 
 .input-text {
 	margin-bottom:15px;
