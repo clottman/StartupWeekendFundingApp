@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   root 'plaid#index'
 
   get 'search_nonprofits' => 'plaid#search_nonprofits'
+  get 'connect_bank' => 'plaid#connect_bank'
+  get 'choose_charity' => 'plaid#choose_charity'
+  get 'transaction_list' => 'plaid#transaction_list'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

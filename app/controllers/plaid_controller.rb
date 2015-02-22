@@ -4,6 +4,18 @@ class PlaidController < ApplicationController
 
 	end
 
+	def connect_bank
+
+	end
+
+	def choose_charity
+
+	end
+
+	def transaction_list
+
+	end
+
 	def get_transactions
 		user = Plaid.add_user "connect", "plaid_test", "plaid_good", "wells"
 		transactions = user.transactions
@@ -16,5 +28,6 @@ class PlaidController < ApplicationController
 		render json: response
 		#respond_with response
 	end
+
 
 end
