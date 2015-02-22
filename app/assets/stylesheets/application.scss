@@ -18,17 +18,33 @@
  */
 
 $primary-color: #1c4ba9;
+$primary-color-light: #5f81c4;
 $secondary-color: #0b9c91;
 $tertiary-color: #3e20af;
 
- h1 {
-	color:$primary-color;
+
+h1 {
+	color:$tertiary-color;
 }
 
 h2 {
-	color:white;
+	//color:white;
 }
 
 body {
-	background-color:$secondary-color;
+	// background-color:$primary-color;
+}
+
+.header {
+	background-color:$primary-color;	
+}
+
+.header-logo {
+	max-height:80px;
+}
+
+.step-1 {
+	// background: $primary-color-light;
+	// background: white;
+	border-bottom: 1px solid $primary-color-light;
 }
