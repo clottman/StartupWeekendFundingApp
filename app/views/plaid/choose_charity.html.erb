@@ -1,7 +1,7 @@
 <div class="container">	
 	<div class="row">
 		<div class="col-xs-12">
-			<h2>Which charity would you like to donate to?</h2>
+			<h2>Which non-profit would you like to donate to?</h2>
 		</div>
 		<div class="col-xs-12">
 			<div class="featured">
@@ -34,13 +34,13 @@
 	<div class="col-xs-12">
 		<div class="search">
 			<div>
-				<h4>Enter your favorite charity's name, or explore charities in your area.</h4>
+				<h4>Enter a non-profit's name, or explore non-profits in your area.</h4>
 			</div>	
 			<div>
 			<%= form_tag "search_nonprofits", remote: true, method: :get do %>
 				<div class="">
-					<%= text_field_tag 'q', nil, class: 'typeahead', data: { provide: 'typeahead' }  %>
-					<%= link_to "Donate to this charity!", 'submit_choose_charity', class: ['btn btn-primary'] %>
+					<%= text_field_tag 'q', '', class: 'typeahead', data: { provide: 'typeahead' }  %>
+					<%= link_to "Select", 'submit_choose_charity', class: ['btn btn-primary'] %>
 				</div>
 				<div class="">
 						<br/>
