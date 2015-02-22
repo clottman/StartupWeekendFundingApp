@@ -53,3 +53,11 @@ h1 {
   margin-top: 30px; }
   .form-signin button {
     margin-top: 20px; }
+
+.pw-strength-label {
+  margin-top:-20px;
+  text-align:center;
+}
+.progress {
+  margin-top:5px;
+}
