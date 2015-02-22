@@ -24,6 +24,19 @@ class PlaidController < ApplicationController
 	end
 
 	def transaction_list
+  		@user = Plaid.add_user("connect", "plaid_test", "plaid_good", "wells")
+  		@transactions = []
+		@user.transactions.each do |t|
+			amount = t[2]
+			change = amount.ceil - amount
+			if (amount > 0)
+				@transactions.push ({
+					amount: amount,
+					name: t[3],
+					change: change
+				})
+			end
+		end
 	end
 
 	def thanks
@@ -37,7 +50,6 @@ class PlaidController < ApplicationController
 	def search_nonprofits
 		begin
 		search_string = URI.encode ("https://projects.propublica.org/nonprofits/api/v1/search.json?q=" + params[:q] + "&state[id]=NE")
-		puts search_string
 		response = open(search_string).read
 		rescue
 			response = "{filings: []}"

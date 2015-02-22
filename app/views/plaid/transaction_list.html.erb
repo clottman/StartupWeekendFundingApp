@@ -1,4 +1,9 @@
 <ul>
-	<li>Transaction 1</li>	
-	<li>Transaction 2</li>
+<% @transactions.each do |t| %>
+	<li>
+		<p><span>Amount: </span><%= t[:amount] %></p>
+		<p><span>Location: </span><%= t[:name] %></p>
+		<p><span>Charity Change: </span><%= number_to_currency t[:change] %></p>
+	</li>
+<% end %>
 </ul>
