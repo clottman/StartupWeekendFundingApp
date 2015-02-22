@@ -8,12 +8,12 @@ Rails.application.routes.draw do
   get 'search_nonprofits' => 'plaid#search_nonprofits'
   get 'connect_bank' => 'plaid#connect_bank'
   get 'choose_charity' => 'plaid#choose_charity'
-  get 'transaction_list' => 'plaid#transaction_list'
+  get 'dashboard' => 'plaid#transaction_list'
   get 'thanks' => 'plaid#thanks'
   get 'submit_signin' => 'plaid#submit_signin'
   get 'submit_choose_charity' => 'plaid#submit_choose_charity'
   get 'submit_connect_bank' => 'plaid#submit_connect_bank'
-  
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
