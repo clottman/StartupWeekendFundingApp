@@ -27,24 +27,43 @@ h1 {
 	color:$tertiary-color;
 }
 
-h2 {
-	//color:white;
-}
-
-body {
-	// background-color:$primary-color;
+.btn-primary {
+	border:none;
+	background-color:$secondary-color;
+	background-image:none;
+	&hover{
+		background-color:$primary-color;
+	}
 }
 
 .header {
 	background-color:$primary-color;	
 }
 
-.header-logo {
-	max-height:80px;
+.footer {
+	margin-top:10px;
+	height:5px;
+	// background-color:gray;
 }
 
-.step-1 {
+.header-logo {
+	max-height:80px;
+	margin:10px;
+	margin-left:20px;	
+}
+
+.step-1,
+.step-2,
+.step-3 {
 	// background: $primary-color-light;
 	// background: white;
 	border-bottom: 1px solid $primary-color-light;
+	min-height: 120px;
+}
+
+.form-signin {
+	margin-top:30px;
+	button {
+		margin-top:20px;
+	}
 }
