@@ -1,0 +1,323 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ 
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import application.scss.css
+ @import plaid.scss
+ */
+body {
+  background-color: #5f81c4;
+  background-color: #eee; }
+
+.bg-gradient {
+  /* IE10 Consumer Preview */
+  background-image: -ms-radial-gradient(right bottom, ellipse farthest-corner, #5f81c4 0%, #092a6c 100%);
+  /* Mozilla Firefox */
+  background-image: -moz-radial-gradient(right bottom, ellipse farthest-corner, #5f81c4 0%, #092a6c 100%);
+  /* Opera */
+  background-image: -o-radial-gradient(right bottom, ellipse farthest-corner, #5f81c4 0%, #092a6c 100%);
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(radial, right bottom, 0, right bottom, 896, color-stop(0, #5f81c4), color-stop(1, #092a6c));
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-radial-gradient(right bottom, ellipse farthest-corner, #5f81c4 0%, #092a6c 100%);
+  /* W3C Markup, IE10 Release Preview */
+  background-image: radial-gradient(ellipse farthest-corner at right bottom, #5f81c4 0%, #092a6c 100%); }
+
+h1 {
+  color: #3e20af; }
+
+h2 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-family: Rockwell;
+  color: #555;
+  color: #0b9c91; }
+
+.btn-primary {
+  border: none;
+  background-color: #0b9c91;
+  background-image: none; }
+  .btn-primary:hover {
+    background-color: #1c4ba9;
+    background-color: white;
+    color: #0b9c91; }
+
+a, .link {
+  color: #50bbb3; }
+  a:hover, .link:hover {
+    cursor: pointer;
+    color: white; }
+
+.btn-link {
+  color: #50bbb3; }
+  .btn-link:hover {
+    background-color: white;
+    color: #0b9c91;
+    text-decoration: none; }
+
+.header .btn-link {
+  margin-top: 10px;
+  color: white; }
+  .header .btn-link:hover {
+    color: white;
+    background-color: transparent; }
+
+.header {
+  background-color: #1c4ba9; }
+
+.footer {
+  margin-top: 10px;
+  background-color: white; }
+  .footer img {
+    margin: auto;
+    margin-bottom: 10px; }
+  .footer .lock {
+    margin-top: 10px;
+    width: 25px; }
+  .footer .securitybadge {
+    margin-top: 9px; }
+  .footer .briefcase {
+    margin-top: 13px; }
+
+.header-logo {
+  margin: 50px auto 40px auto; }
+
+.sub-header {
+  height: 50px;
+  /* IE10 Consumer Preview */
+  background-image: -ms-radial-gradient(right top, ellipse farthest-corner, #5f81c4 0%, #092a6c 100%);
+  /* Mozilla Firefox */
+  background-image: -moz-radial-gradient(right top, ellipse farthest-corner, #5f81c4 0%, #092a6c 100%);
+  /* Opera */
+  background-image: -o-radial-gradient(right top, ellipse farthest-corner, #5f81c4 0%, #092a6c 100%);
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(radial, right top, 0, right top, 896, color-stop(0, #5f81c4), color-stop(1, #092a6c));
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-radial-gradient(right top, ellipse farthest-corner, #5f81c4 0%, #092a6c 100%);
+  /* W3C Markup, IE10 Release Preview */
+  background-image: radial-gradient(ellipse farthest-corner at right top, #5f81c4 0%, #092a6c 100%); }
+  .sub-header .header-logo {
+    max-height: 40px;
+    margin: 5px auto auto 20px; }
+
+.step-icon {
+  max-width: 80px;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-left: 70px;
+  margin-right: 20px; }
+
+.step-1,
+.step-2,
+.step-3 {
+  min-height: 100px;
+  color: white; }
+  .step-1 h2,
+  .step-2 h2,
+  .step-3 h2 {
+    color: white;
+    margin-bottom: 8px;
+    padding-top: 3px; }
+
+.form-signin {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border-bottom: 5px;
+  border-color: #eeeeee; }
+  .form-signin button {
+    width: 49%; }
+
+.charity {
+  height: 130px;
+  padding-top: 20px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #0b9c91;
+  color: #444444;
+  font-weight: bold;
+  text-align: right;
+  border: 2px solid #50bbb3;
+  background-color: white; }
+  .charity .logo {
+    margin-top: -20px;
+    height: 128px;
+    float: left;
+    padding: 5px;
+    border-right: 2px solid #50bbb3; }
+  .charity:hover {
+    color: white;
+    cursor: pointer;
+    background-color: #50bbb3; }
+  .charity .verified {
+    margin: 10px 0;
+    max-width: 100px;
+    position: absolute;
+    bottom: 10px;
+    right: 30px; }
+
+.text-right {
+  text-align: right; }
+
+.search {
+  min-height: 130px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  border: 2px solid #50bbb3;
+  background-color: white; }
+  .search h4 {
+    font-size: 18px;
+    color: #0b9c91;
+    color: #444444;
+    font-weight: bold;
+    line-height: 40px; }
+  .search label {
+    font-size: 16px; }
+  .search select {
+    margin-right: 15px; }
+
+#np_search_results p {
+  line-height: 30px; }
+
+#np_search_results button {
+  position: relative;
+  float: right; }
+
+.bank {
+  min-height: 90px;
+  padding: 15px;
+  font-size: 18px;
+  color: #0b9c91;
+  color: #444444;
+  font-weight: bold;
+  border: 2px solid #50bbb3;
+  background-color: white;
+  margin-bottom: 10px; }
+  .bank:hover {
+    color: white;
+    cursor: pointer;
+    background-color: #50bbb3; }
+
+.typeahead {
+  padding: 3px;
+  min-width: 180px; }
+
+.featured,
+#np_search_results,
+.browse {
+  margin-bottom: 60px; }
+
+.input-text {
+  margin-bottom: 15px; }
+
+.input-logo {
+  margin-bottom: 20px; }
+
+.tile {
+  margin-bottom: 30px;
+  border: 5px solid #553876; }
+  .tile img {
+    width: 100%; }
+
+.tile-body {
+  padding: 5px;
+  background-color: #553876; }
+
+.tile-section {
+  color: white;
+  margin: 10px 0; }
+
+.transaction-list {
+  margin-bottom: 0;
+  background-color: #553876; }
+
+.transaction {
+  border: 3px solid #553876;
+  border-radius: 5px;
+  padding: 5px; }
+
+.currency-amount,
+.change-amount {
+  float: right; }
+
+.total-section {
+  height: 250px;
+  overflow: hidden;
+  text-align: center; }
+  .total-section .change-amount {
+    float: none;
+    display: block;
+    margin: auto;
+    color: white;
+    font-weight: normal;
+    font-size: 35px; }
+
+.transaction-change {
+  color: #eeeeee;
+  color: white; }
+
+.charity-name {
+  font-size: 16px; }
+
+.tile-section .charity-logo {
+  max-height: 128px;
+  max-width: 100%;
+  width: auto;
+  margin: auto;
+  margin-bottom: 5px; }
+
+.change-amount {
+  font-weight: bold;
+  color: #0b9c91;
+  color: #81a3e6; }
+
+.list-group {
+  max-height: 250px;
+  overflow: auto; }
+
+.tile-section .act_icon {
+  max-height: 20px;
+  width: auto;
+  margin: 0 5px;
+  float: right; }
+
+span.account {
+  padding-left: 30px;
+  font-size: 16px;
+  height: 35px;
+  display: inline-block; }
+
+select {
+  /* the exact size is ignored in chrome, but it makes it a little bigger */
+  /* add webkit-appearance: none; if you want this to exactly work */
+  font-size: 2em; }
+
+.right {
+  float: right; }
+
+.modal-buttons {
+  height: 40px; }
+
+.modal-buttons button, .modal-buttons a {
+  margin-top: 10px;
+  margin-left: 10px; }
+
+.thanks {
+  min-height: 600px;
+  font-size: 16px; }
+
+.confirm-charity h4 {
+  margin-bottom: -5px; }
