@@ -3,6 +3,7 @@ class PlaidController < ApplicationController
 	require 'json'
 	
 	def index
+		@hide_header = true
 	end
 
 	def submit_signin
