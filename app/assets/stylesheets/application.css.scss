@@ -102,7 +102,7 @@ a, .link {
 	&:hover {
 		color:white;
 		background-color: transparent;
-		
+
 	}
 }
 
@@ -209,7 +209,7 @@ a, .link {
 	text-align: right;
 	border: 2px solid $secondary-color-light;
 	background-color: white;
-	img {		
+	.logo {		
 		margin-top:-20px;
 		height: 128px;
 		float:left;
@@ -221,14 +221,22 @@ a, .link {
 		cursor:pointer;
 		background-color: $secondary-color-light;
 	}
+	.verified {
+		margin:10px 0;
+		max-width:100px;
+		position: absolute;
+		bottom: 0;
+		right: 30px;
+	}
 }
 
 .text-right {
 	text-align: right;
 }
 .search {
-	height:130px;
+	min-height:130px;
 	padding-right:10px;
+	padding-bottom:10px;
 	margin-bottom:10px;
 	.search-input-text {
 		// width:auto;
@@ -390,5 +398,5 @@ span.account {
 }
 
 select {
-	font-size:2em;
+	font-size:16px;
 }

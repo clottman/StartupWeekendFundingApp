@@ -8,25 +8,29 @@
 				<!-- <h4>Featured Local Charities:</h4> -->
 				<div class="col-md-4">
 					<div class="charity">
-						<img src="images/odm.jpg" class="pull-left">
-						Open Door Mission Omaha Chapter
+						<img src="images/odm.jpg" class="pull-left logo">
+						Open Door Mission Omaha Chapter<br/>
+						<img src="images/verified-icon.gif" class="verified">
 					</div>	
 				</div>	
 				<div class="col-md-4">		
 					<div class="charity">
-						<img src="images/nhs.png">
-						Nebraska Humane Society
+						<img src="images/nhs.png" class='logo'>
+						Nebraska Humane Society<br/>
+						<img src="images/verified-icon.gif" class="verified">
 					</div>	
 				</div>	
 				<div class="col-md-4">
 					<div class="charity">
-						<img src="images/buildinghouse.jpg">
-						Omaha Habitat for Humanity
+						<img src="images/buildinghouse.jpg" class='logo'>
+						Omaha Habitat for Humanity<br/>
+						<img src="images/verified-icon.gif" class="verified">
 					</div>	
 				</div>	
 			</div>
 		</div>
 	</div>			
+	<div class="row">
 	<div class="col-xs-12">
 		<div class="search">
 			<div>
@@ -34,11 +38,12 @@
 			</div>	
 			<div>
 			<%= form_tag "search_nonprofits", remote: true, method: :get do %>
-				<div class="col-md-6">
+				<div class="">
 					<%= text_field_tag 'q', nil, class: 'typeahead', data: { provide: 'typeahead' }  %>
 					<%= link_to "Donate to this charity!", 'submit_choose_charity', class: ['btn btn-primary'] %>
 				</div>
-				<div class="col-md-6">
+				<div class="">
+						<br/>
 						<%= label_tag "state", "State:" %>
 						<%= select_tag "state", options_for_select(us_states, "NE") %>
 						<%= label_tag "category", "By Category:" %>
@@ -53,4 +58,4 @@
 
 	</div>	
 
-	</div>
+	</div></div>

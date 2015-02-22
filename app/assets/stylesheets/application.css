@@ -150,7 +150,7 @@ a, .link {
   text-align: right;
   border: 2px solid #50bbb3;
   background-color: white; }
-  .charity img {
+  .charity .logo {
     margin-top: -20px;
     height: 128px;
     float: left;
@@ -160,13 +160,20 @@ a, .link {
     color: white;
     cursor: pointer;
     background-color: #50bbb3; }
+  .charity .verified {
+    margin: 10px 0;
+    max-width: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 30px; }
 
 .text-right {
   text-align: right; }
 
 .search {
-  height: 130px;
+  min-height: 130px;
   padding-right: 10px;
+  padding-bottom: 10px;
   margin-bottom: 10px;
   text-align: center;
   border: 2px solid #50bbb3;
@@ -294,4 +301,4 @@ span.account {
   display: inline-block; }
 
 select {
-  font-size: 2em; }
+  font-size: 16px; }
