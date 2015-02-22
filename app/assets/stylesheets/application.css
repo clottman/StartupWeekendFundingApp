@@ -19,6 +19,12 @@
 h1 {
   color: #3e20af; }
 
+h2 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-family: Rockwell;
+  color: #555; }
+
 .btn-primary {
   border: none;
   background-color: #0b9c91;
@@ -58,6 +64,7 @@ h1 {
   height: 110px;
   padding-top: 20px;
   padding-right: 10px;
+  margin-bottom: 10px;
   font-size: 18px;
   color: #0b9c91;
   font-weight: bold;
@@ -68,6 +75,23 @@ h1 {
     height: 108px;
     float: left;
     padding-right: 10px; }
+  .charity:hover {
+    color: white;
+    cursor: pointer;
+    background-color: #50bbb3; }
+
+.bank {
+  height: 70px;
+  padding: 15px;
+  font-size: 18px;
+  color: #0b9c91;
+  font-weight: bold;
+  border: 2px solid #50bbb3;
+  margin-bottom: 10px; }
+  .bank:hover {
+    color: white;
+    cursor: pointer;
+    background-color: #50bbb3; }
 
 .typeahead {
   padding: 3px; }
