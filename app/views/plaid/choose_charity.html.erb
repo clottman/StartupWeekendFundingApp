@@ -30,14 +30,18 @@
 	<div class="col-xs-12">
 	<form>
 		<div class="search">
-			<h4>Search For Charities:</h4>
-			<input type="text" class="typeahead" id='nonprofits-typeahead' data-provide='typeahead' autocomplete="off" />
-			<%= label_tag "state", "State:" %>
-			<%= select_tag "state", options_for_select(us_states, "NE") %>
-			<%= label_tag "category", "By Category:" %>
-			<%= select_tag "category", options_for_select(nonprofit_types, "All") %>
-			<button class="btn btn-primary">Search</button>
-		</div>	
+			<div>
+				<h4>Enter your favorite charity's name, or explore charities in your area.</h4>
+			</div>	
+			<div>
+				<input type="text" class="typeahead" id='nonprofits-typeahead' data-provide='typeahead' autocomplete="off" />
+				<%= label_tag "state", "State:" %>
+				<%= select_tag "state", options_for_select(us_states, "NE") %>
+				<%= label_tag "category", "By Category:" %>
+				<%= select_tag "category", options_for_select(nonprofit_types, "All") %>
+				<button class="btn btn-primary">Search</button>
+			</div>
+		</div>
 	</form>
 
 	</div>	
