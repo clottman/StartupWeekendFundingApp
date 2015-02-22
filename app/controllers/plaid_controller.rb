@@ -56,9 +56,23 @@ class PlaidController < ApplicationController
 	end
 
 	def search_nonprofits
+		query = "https://projects.propublica.org/nonprofits/api/v1/search.json?"
+		if params[:category].to_i != 0 
+			query = query + "ntee[id]=" + params[:category] + "&"
+		end
+		if params[:q] != ""
+			query = query + "q=" + params[:q] + "&"
+ 		end
+ 		if params[:state].blank?
+ 			state = "NE"
+ 		else
+ 			state = params[:state]
+ 		end
+
 		begin
-		search_string = URI.encode ("https://projects.propublica.org/nonprofits/api/v1/search.json?q=" + params[:q] + "&state[id]=NE")
-		response = open(search_string).read
+			search_string = URI.encode(query + "state[id]=" + state)
+			puts search_string
+			response = open(search_string).read
 		rescue
 			response = "{filings: []}"
 		end

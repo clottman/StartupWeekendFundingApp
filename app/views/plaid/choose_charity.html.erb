@@ -28,21 +28,26 @@
 		</div>
 	</div>			
 	<div class="col-xs-12">
-	<form>
 		<div class="search">
 			<div>
 				<h4>Enter your favorite charity's name, or explore charities in your area.</h4>
 			</div>	
 			<div>
-				<input type="text" class="typeahead" id='nonprofits-typeahead' data-provide='typeahead' autocomplete="off" />
-				<%= label_tag "state", "State:" %>
-				<%= select_tag "state", options_for_select(us_states, "NE") %>
-				<%= label_tag "category", "By Category:" %>
-				<%= select_tag "category", options_for_select(nonprofit_types, "All") %>
-				<button class="btn btn-primary">Search</button>
+			<%= form_tag "search_nonprofits", remote: true, method: :get do %>
+				<div class="col-md-6">
+					<%= text_field_tag 'q', nil, class: 'typeahead', data: { provide: 'typeahead' }  %>
+					<%= link_to "Donate to this charity!", 'submit_choose_charity', class: ['btn btn-primary'] %>
+				</div>
+				<div class="col-md-6">
+						<%= label_tag "state", "State:" %>
+						<%= select_tag "state", options_for_select(us_states, "NE") %>
+						<%= label_tag "category", "By Category:" %>
+						<%= select_tag "category", options_for_select(nonprofit_types, "All") %>
+						<%= submit_tag "Search", class: ["btn btn-primary"] %>
+				</div>
+			<% end %>
 			</div>
 		</div>
-	</form>
 
 	</div>	
 
