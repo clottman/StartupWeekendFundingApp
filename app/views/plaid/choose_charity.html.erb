@@ -7,49 +7,49 @@
 </div>
 <div class="container">	
 	<div class="row">
-	<div class="col-xs-12">
-		<h2>Which charity would you like to donate to?</h2>
-	</div>
-	<div class="col-xs-12">
-		<div class="featured">
-			<!-- <h4>Featured Local Charities:</h4> -->
-			<div class="col-md-4">
-				<div class="charity">
-					<img src="images/odm.jpg" class="pull-left">
-					Open Door Mission Omaha Chapter
+		<div class="col-xs-12">
+			<h2>Which charity would you like to donate to?</h2>
+		</div>
+		<div class="col-xs-12">
+			<div class="featured">
+				<!-- <h4>Featured Local Charities:</h4> -->
+				<div class="col-md-4">
+					<div class="charity">
+						<img src="images/odm.jpg" class="pull-left">
+						Open Door Mission Omaha Chapter
+					</div>	
 				</div>	
-			</div>	
-			<div class="col-md-4">		
-				<div class="charity">
-					<img src="images/nhs.png">
-					Nebraska Humane Society
+				<div class="col-md-4">		
+					<div class="charity">
+						<img src="images/nhs.png">
+						Nebraska Humane Society
+					</div>	
 				</div>	
-			</div>	
-			<div class="col-md-4">
-				<div class="charity">
-					<img src="images/buildinghouse.jpg">
-					Omaha Habitat for Humanity
-				</div>	
-			</div>
-			<div class="col-md-4">
-				<div class="search">
-					<h4>Search For Charities:</h4>
-					<input type="text" class="typeahead search-input-text" id='nonprofits-typeahead' data-provide='typeahead' autocomplete="off" />
-					<select><option>NE</option></select>
-					and / or
-					<select><option>All Categories</option></select>
-					<button class="btn-primary">Search</button>
-				</div>	
+				<div class="col-md-4">
+					<div class="charity">
+						<img src="images/buildinghouse.jpg">
+						Omaha Habitat for Humanity
+					</div>	
 				</div>	
 			</div>
 		</div>
 	</div>
 	<!-- <div class="col-xs-12">
-		<div class="search">
+		<div class="search"> -->
 			
+	<div class="col-xs-12">
+	<form>
+		<div class="search">
+			<h4>Search For Charities:</h4>
+			<input type="text" class="typeahead" id='nonprofits-typeahead' data-provide='typeahead' autocomplete="off" />
+			<%= label_tag "state", "State:" %>
+			<%= select_tag "state", options_for_select(us_states, "NE") %>
+			<%= label_tag "category", "By Category:" %>
+			<%= select_tag "category", options_for_select(nonprofit_types, "All") %>
+			<button class="btn btn-primary">Search</button>
+		</div>	
+	</form>
+
 	</div>	
 
-	</div> -->
-	
-	</div>	
-</div>	
+	</div>

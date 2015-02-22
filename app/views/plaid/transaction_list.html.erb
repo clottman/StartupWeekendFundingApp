@@ -3,7 +3,7 @@
 <ul class="list-group">
 <% @transactions.each do |t| %>
 	<li class="transaction list-group-item">
-		<p><span>Amount: </span><%= t[:amount] %></p>
+		<p><span>Amount: </span><%= number_to_currency t[:amount] %></p>
 		<p><span>Location: </span><%= t[:name] %></p>
 		<p class="change-amount"><span>Charity Change: </span><%= number_to_currency t[:change] %></p>
 	</li>
