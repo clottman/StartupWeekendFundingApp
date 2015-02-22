@@ -5,66 +5,46 @@
 	</div>
 	<div class="col-sm-12">
 		<div class="featured">
+		<% banks.each do |b| %>
 			<div class="col-sm-3">
-				<div class="bank">
-					American Express
+				<div class="bank" data-toggle="modal" data-target="#account-info-modal">
+					<%= b %>
 				</div>	
 			</div>	
-			<div class="col-sm-3">
-				<div class="bank">
-					Bank of America
-				</div>	
-			</div>	
-			<div class="col-sm-3">
-				<div class="bank">
-					Capital One 360
-				</div>	
-			</div>	
-			<div class="col-sm-3">
-				<div class="bank">
-					Charles Schwab
-				</div>	
-			</div>	
-			<div class="col-sm-3">
-				<div class="bank">
-					Chase
-				</div>	
-			</div>	
-			<div class="col-sm-3">
-				<div class="bank">
-					Citi
-				</div>	
-			</div>	
-			<div class="col-sm-3">
-				<div class="bank">
-					Fidelity
-				</div>	
-			</div>	
-			<div class="col-sm-3">
-				<div class="bank">
-					US Bank
-				</div>	
-			</div>	
-			<div class="col-sm-3">
-				<div class="bank">
-					USAA
-				</div>	
-			</div>	
-			<div class="col-sm-3">
-				<div class="bank">
-					Wells Fargo
-				</div>	
-			</div>	
-			<div class="col-sm-3">
-				<div class="bank">
-					Other?
-				</div>	
-			</div>	
+		<% end %>
 
 		</div>
 	</div>
 	
 	</div>	
-</div>	
+</div>
 
-<%= link_to "Almost Done!", "thanks" %>
+<div id="account-info-modal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Enter your acccount info:</h4>
+      </div>
+      <div class="modal-body">
+		<form>
+		    <h2 class="form-signin-heading"></h2>
+		    <formgroup>
+		    	<label for="username" class="sr-only">Username</label>
+		    	<input name="username" class="form-control" placeholder="Username" required="" autocomplete="off">
+	    	</formgroup>
+		    <formgroup>
+		    	<label for="password" class="sr-only">Password</label>
+		    	<input name="password" class="form-control" placeholder="Password" required="" autocomplete="off">
+		    </formgroup>
+		 <div class="modal-buttons">
+        	<button type="button" class="btn btn-default right" data-dismiss="modal">Close</button>
+        	<!-- <button type="button" class="btn btn-primary right">Submit</button> -->
+        	<%= link_to "Submit", "thanks", class: "btn btn-primary right" %>
+		</div>
+  		</form>
+      </div>
+<!--      <div class="modal-footer"> </div> -->
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->	

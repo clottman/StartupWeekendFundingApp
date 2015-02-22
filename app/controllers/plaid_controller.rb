@@ -48,6 +48,7 @@ class PlaidController < ApplicationController
 	end
 
 	def thanks
+		@hide_header = true
 	end
 
 	def get_transactions
