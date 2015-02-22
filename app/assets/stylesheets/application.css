@@ -53,9 +53,9 @@ h2 {
     background-color: white;
     color: #0b9c91; }
 
-.link {
+a, .link {
   color: #50bbb3; }
-  .link:hover {
+  a:hover, .link:hover {
     cursor: pointer;
     color: white; }
 
@@ -138,6 +138,7 @@ h2 {
   margin-bottom: 10px;
   font-size: 18px;
   color: #0b9c91;
+  color: #444444;
   font-weight: bold;
   text-align: right;
   border: 2px solid #50bbb3;
@@ -196,3 +197,6 @@ h2 {
 
 .input-text {
   margin-bottom: 15px; }
+
+.input-logo {
+  margin-bottom: 20px; }

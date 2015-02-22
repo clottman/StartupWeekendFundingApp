@@ -77,7 +77,7 @@ h2 {
 	}
 }
 
-.link {
+a, .link {
 	color:$secondary-color-light;
 	&:hover {
 		cursor:pointer;
@@ -192,11 +192,12 @@ h2 {
 	margin-bottom:10px;
 	font-size:18px;
 	color: $secondary-color;
+	color: $gray-dark;
 	font-weight:bold;
 	text-align: right;
 	border: 2px solid $secondary-color-light;
 	background-color: white;
-	img {
+	img {		
 		margin-top:-20px;
 		height: 128px;
 		float:left;
@@ -264,4 +265,8 @@ h2 {
 
 .input-text {
 	margin-bottom:15px;
+}
+
+.input-logo {
+	margin-bottom:20px;
 }
