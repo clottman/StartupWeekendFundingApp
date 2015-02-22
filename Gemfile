@@ -27,6 +27,7 @@ gem 'plaid'
 gem 'figaro'
 gem 'annotate'
 gem 'bootstrap-sass'
+gem 'sprockets-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

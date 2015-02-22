@@ -26,7 +26,6 @@ class PlaidController < ApplicationController
 		puts search_string
 		response = open(search_string).read
 		render json: response
-		#respond_with response
 	end
 
 
