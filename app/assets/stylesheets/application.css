@@ -19,11 +19,32 @@
 h1 {
   color: #3e20af; }
 
+.btn-primary {
+  border: none;
+  background-color: #0b9c91;
+  background-image: none; }
+  .btn-primaryhover {
+    background-color: #1c4ba9; }
+
 .header {
   background-color: #1c4ba9; }
 
-.header-logo {
-  max-height: 80px; }
+.footer {
+  margin-top: 10px;
+  height: 5px; }
 
-.step-1 {
-  border-bottom: 1px solid #5f81c4; }
+.header-logo {
+  max-height: 80px;
+  margin: 10px;
+  margin-left: 20px; }
+
+.step-1,
+.step-2,
+.step-3 {
+  border-bottom: 1px solid #5f81c4;
+  min-height: 120px; }
+
+.form-signin {
+  margin-top: 30px; }
+  .form-signin button {
+    margin-top: 20px; }
