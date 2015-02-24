@@ -131,7 +131,7 @@ a, .link {
 }
 
 .header-logo {
-	margin:50px auto 40px auto;
+	margin:0px auto 0px auto;
 }
 
 .sub-header {
@@ -260,7 +260,7 @@ a, .link {
 }
 
 #np_search_results p {line-height:30px;}
-#np_search_results button { position:relative; float:right;}
+#np_search_results button, #np_search_results a { position:relative; float:right;}
 .bank {
 	min-height:90px;
 	padding:15px;
@@ -402,7 +402,7 @@ span.account {
 select {
 	/* the exact size is ignored in chrome, but it makes it a little bigger */
 	/* add webkit-appearance: none; if you want this to exactly work */
-	font-size:2em;
+	font-size:1.5em;
 }
 
 .right {
@@ -424,4 +424,8 @@ select {
 
 .confirm-charity h4 {
 	margin-bottom:-5px;
+}
+
+.step-1 h2 {
+	margin-top:0px;
 }

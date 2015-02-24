@@ -1,7 +1,7 @@
 <div class="list-group">
 <% unless names.blank? %>
 	<% names.each do |f| %>
-		<p class="list-group-item"><%= f %><button class="btn btn-primary text-right">Select</button></p>
+		<p class="list-group-item"><%= f %><a class="btn btn-primary text-right" href="connect_bank">Select</a></p>
 	<% end %>
 <% else %>
 	<p class="list-group-item">No results for the selected category.</p>	
